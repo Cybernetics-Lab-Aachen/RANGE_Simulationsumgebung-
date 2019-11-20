@@ -1,0 +1,20 @@
+module gazebo {
+
+struct Point{
+	double x;
+	double y;
+	double z;
+};
+
+struct Quaternion{
+	double x;
+	double y;
+	double z;
+	double w;
+};
+
+struct ApuSpawn {
+	Point position;
+	Quaternion orientation;
+};
+};

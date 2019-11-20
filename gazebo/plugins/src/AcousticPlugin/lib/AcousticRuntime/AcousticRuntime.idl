@@ -1,0 +1,26 @@
+module gazebo{
+	struct Position{
+		double x;
+		double y;
+		double z;
+	};
+
+	struct Orientation{
+		double x;
+		double y;
+		double z;
+		double w;
+	};
+
+	struct APUState{
+		string<64> id;
+		Position pos;
+		Orientation orie;
+	};
+
+	struct AcousticRuntime{
+		APUState apu_a;
+		APUState apu_b;
+		double delay;
+	};
+};

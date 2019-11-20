@@ -1,0 +1,33 @@
+module gazebo{
+    enum Action{
+        SET_POSITION,
+        GET_POSITION,
+        MELT
+    };
+    
+    
+    
+    struct Posi{
+        double posX;
+        double posY;
+        double posZ;
+        double orX;
+        double orY;
+        double orZ;
+        double orW;
+    };
+    
+    struct MeltIn{
+        double depth;
+        double speed;
+    };
+    
+    
+    struct PositionPluginRequest{
+        string<64> apu;
+        Action act;
+        MeltIn melt;
+        Posi pos;
+    };
+
+};

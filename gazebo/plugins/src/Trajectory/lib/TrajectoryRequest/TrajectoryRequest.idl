@@ -1,0 +1,13 @@
+module range {
+
+
+	struct TrajectoryRequest{
+		string<64> id;
+		string<64> expressionX;
+		string<64> expressionY;
+		string<64> expressionZ;
+		double radius;
+		double e;
+		double voxelWidth;
+	};
+};

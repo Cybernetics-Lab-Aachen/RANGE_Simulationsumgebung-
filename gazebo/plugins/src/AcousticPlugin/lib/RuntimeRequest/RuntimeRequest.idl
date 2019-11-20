@@ -1,0 +1,7 @@
+module gazebo{
+		
+	struct RuntimeRequest{
+		string<64> apu_a;
+		string<64> apu_b;
+	};
+};

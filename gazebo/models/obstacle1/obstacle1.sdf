@@ -1,0 +1,60 @@
+<?xml version='1.0'?>
+<sdf version='1.5'>
+  <model name='obstacle1'>
+    <link name='link_1'>
+      <gravity>0</gravity>
+      <inertial>
+	
+        <mass>1</mass>
+        <pose frame=''>0 0 0 0 0 0</pose>
+        <inertia>
+          <ixx>0</ixx>
+          <ixy>0</ixy>
+          <ixz>0</ixz>
+          <iyy>0</iyy>
+          <iyz>0</iyz>
+          <izz>0</izz>
+        </inertia>
+      </inertial>
+      <visual name='visual'>
+        <geometry>
+          <mesh>
+            <uri>model://obstacle1/meshes/stein1.stl</uri>
+            <scale>1 1 1</scale>
+          </mesh>
+          <!--cylinder>
+            <radius>0.05</radius>
+            <length>0.2</length>
+          </cylinder -->
+        </geometry>
+        <material>
+          <lighting>1</lighting>
+          <script>
+            <uri>file://media/materials/scripts/gazebo.material</uri>
+            <name>Gazebo/Blue</name>
+          </script>
+          <!--shader type='pixel'>
+            <normal_map>__default__</normal_map>
+          </shader!>
+          <ambient>0.3 0.3 0.3 1</ambient>
+          <diffuse>0.7 0.7 0.7 1</diffuse>
+          <specular>0.01 0.01 0.01 1</specular>
+          <emissive>0 0 0 1</emissive-->
+        </material>
+        <cast_shadows>1</cast_shadows>
+        <transparency>0</transparency>
+      </visual>
+      <collision name='collision'>
+        <geometry>
+            <cylinder>
+              <radius>.40</radius>
+              <length>.30</length>
+            </cylinder>
+        </geometry>
+      </collision>
+    </link>
+    <static>0</static>
+    <allow_auto_disable>1</allow_auto_disable>
+  <!--plugin name="PositionPlugin" filename="libPositionPlugin.so"/-->
+  </model>
+</sdf>

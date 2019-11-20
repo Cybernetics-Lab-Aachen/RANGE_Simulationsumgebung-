@@ -1,0 +1,16 @@
+<?xml version="1.0"?>
+
+<model>
+  <name>Robotino Nr 1</name>
+  <version>1.0</version>
+  <sdf version="1.5">obstacle1.sdf</sdf>
+
+  <author>
+    <name>Daniel Habering</name>
+    <email>daniel.habering@ima-zlw-ifu.rwth-aachen.de</email>
+  </author>
+
+  <description>
+    An obstacle model
+  </description>
+</model>

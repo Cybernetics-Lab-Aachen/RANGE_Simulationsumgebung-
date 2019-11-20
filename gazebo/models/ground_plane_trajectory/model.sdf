@@ -1,0 +1,50 @@
+<?xml version="1.0"?>
+<sdf version="1.4">
+  <model name="ground_plane_trajectory">
+    <static>true</static>
+    <link name="link">
+      <!--collision name="collision">
+        <geometry>
+          <plane>
+            <normal>0 0 1</normal>
+            <size>0 0</size>
+          </plane>
+        </geometry>
+        <surface>
+          <friction>
+            <ode>
+              <mu>100</mu>
+              <mu2>50</mu2>
+            </ode>
+          </friction>
+        </surface>
+      </collision-->
+      <visual name="visual">
+        <cast_shadows>false</cast_shadows>
+        <plugin name="Trajectory" filename="libTrajectory.so"/>
+        <geometry>
+          <plane>
+            <normal>0 0 1</normal>
+            <size>1 1</size>
+          </plane>
+        </geometry>
+  	<transparency>1</transparency>	
+      </visual>
+      <visual name="ground">
+	<geometry>
+	  <plane>
+		<normal>0 0 1</normal>
+		<size>20 20</size>
+	  </plane>
+	</geometry>
+        <material>
+          <script>
+            <uri>file://media/materials/scripts/gazebo.material</uri>
+            <name>Gazebo/Grey</name>
+          </script>
+        </material>
+	<transparency>1</transparency>
+      </visual>
+    </link>
+  </model>
+</sdf>

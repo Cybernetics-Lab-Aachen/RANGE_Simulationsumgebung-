@@ -1,0 +1,114 @@
+<?xml version="1.0" ?>
+<sdf version="1.4">
+  <world name="enceladus">
+	
+    <!-- Physics, to determine the simulation speed (step size and update rate) -->
+    <physics type="ode">
+      <max_step_size>0.004</max_step_size>
+      <real_time_factor>1</real_time_factor>
+      <real_time_update_rate>300</real_time_update_rate>
+    </physics>
+
+    <gui>
+      <camera name="user camera">
+	<pose>0 -5 9.5 0 1.1 1.56</pose>
+      </camera>
+    </gui>
+
+    <!-- Ground Plane -->
+    <include>
+      <uri>model://ground_plane_trajectory</uri>
+	<pose>0 0 10 0 0 0</pose>
+    </include>
+    <include>
+      <uri>model://sun</uri>
+    </include>
+
+
+    <!-- Obstacles -->
+    <include>
+	    <name>obst1</name>
+	    <uri>model://obstacle1</uri>
+	    <pose>2 0 15 0.3 -0.1 0.3</pose>
+    </include>
+
+    <include>
+	    <name>obst2</name>
+	    <uri>model://obstacle1</uri>
+	    <pose>-1 1 8 -0.2 0.6 -0.7</pose>
+    </include>
+    
+    <!-- APUs  -->
+
+
+
+    <!--include>
+      <name>apu-1</name>
+      <uri>model://apu-model</uri>
+     <pose>3.5 2 5 0 0 0</pose>
+    </include>
+    <include>
+      <name>apu-2</name>
+      <uri>model://apu-model</uri>
+      <pose>0 3.5 0 0 0 0</pose>
+    </include>
+    <include>
+      <name>apu-3</name>
+      <uri>model://apu-model</uri>
+      <pose>-3.5 0 0 0 0 0</pose>
+    </include>
+    <include>
+      <name>apu-4</name>
+      <uri>model://apu-model</uri>
+      <pose>0 -3.5 0 0 0 0</pose>
+    </include>
+    <include>
+      <name>apu-5</name>
+      <uri>model://apu-model</uri>
+      <pose>2.5 2.5 0 0 0 0</pose>
+    </include>
+    <include>
+      <name>apu-6</name>
+      <uri>model://apu-model</uri>
+      <pose>-2.5 2.5 0 0 0 0</pose>
+    </include>
+    <include>
+      <name>apu-7</name>
+      <uri>model://apu-model</uri>
+      <pose>-2.5 -2.5 0 0 0 0</pose>
+    </include>
+    <include>
+      <name>apu-8</name>
+      <uri>model://apu-model</uri>
+      <pose>2.5 -2.5 0 0 0 0</pose>
+    </include>
+    -->
+    <!-- Light -->
+    <light name="light" type="point">
+      <cast_shadows>false</cast_shadows>
+      <pose>-12 3 1 0 0 0</pose>
+      <diffuse>127 127 127 255</diffuse>
+      <specular>25 25 25 255</specular>
+      <attenuation>
+	<range>20.0</range>
+	<linear>0.01</linear>
+	<constant>0.7</constant>
+	<quadratic>0.00</quadratic>
+      </attenuation>
+    </light>
+     
+
+<!-- Plugins for the world -->
+    <plugin name="factory" filename="libfactory.so" />
+    <!--plugin name="Renaming" filename="libRenaming.sh" /-->
+    <plugin name ="AcousticPlugin" filename="libAcousticPlugin.so"/>
+    <!-- <plugin name="llsf_refbox_comm" filename="libllsf_refbox_comm.so" />-->
+    <!--<plugin name="timesync" filename="libtimesync.so" />-->
+    <!-- <plugin name="mps_placement" filename="libmps_placement.so" /> -->
+    <!-- Plugins for the world -->
+    
+>>>>>>> dhabering/Position
+  </world>
+</sdf>
+
+

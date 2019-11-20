@@ -1,0 +1,10 @@
+Number of Agents: 8
+Random Spawn: false
+Agent1: 2.0,2.0,51.0
+Agent2: 2.0,2.0,54.0
+Agent3: 2.0,-2.0,51.0
+Agent4: 2.0,-2.0,54.0
+Agent5: -2.0,2.0,51.0
+Agent6: -2.0,2.0,54.0
+Agent7: -2.0,-2.0,51.0
+Agent8: -2.0,-2.0,54.0

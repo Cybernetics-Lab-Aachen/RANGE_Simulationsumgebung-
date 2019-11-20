@@ -1,0 +1,13 @@
+module range{
+typedef string<64> UID;
+
+enum Content{
+	POSE
+};
+
+struct PositionRequest{
+	UID uid;
+	Content content;
+};
+};
+

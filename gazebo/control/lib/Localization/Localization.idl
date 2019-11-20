@@ -1,0 +1,56 @@
+/*******************************************************************************
+RANGE datamodel for Localization module
+
+Author Daniel Ewert <daniel.ewert@ima-zlw-ifu.rwth-aachen.de>
+*******************************************************************************/
+
+
+
+
+module de {
+module dlr {
+module enex {
+module datamodel {
+module range {
+typedef string<64> UID;
+
+
+typedef string<64> Frame;
+    // Point in 3D, unit is meter.
+    struct Point {
+        double x;
+        double y;
+        double z;
+    };
+
+    struct Quaternion {
+        double x;
+        double y;
+        double z;
+        double w;
+    };
+enum ProcessState {
+        WORKING,
+        IDLE,
+        NOT_RESPONDING,
+        STOPPED
+    };
+
+struct Pose {
+        Point position;
+        Quaternion orientation;
+        Frame frame; //reference coordinate frame
+    };
+
+    struct Localization{
+        UID apu; //@key
+        Pose relative_position;
+        ProcessState state;
+    };
+
+
+};
+};
+};
+};
+};

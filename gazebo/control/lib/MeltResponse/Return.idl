@@ -1,0 +1,10 @@
+module range{
+	struct Return{
+	   string id;
+	   double depth;
+
+	};
+
+
+
+};
